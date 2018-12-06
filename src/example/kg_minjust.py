@@ -78,20 +78,20 @@ def extractdata(context, data):
     print("----------------Printing Org Data------------------")
     print(org_data)
 
-    # def clean_dict(rawdict):
-    #     result = {}
-    #     for key, values in rawdict.items():
-    #         if value is None:
-    #             value = '---'
-    #         result[key] = key
-    #         result[value] = value
-    #     return (result)
+    def clean_dict(rawdict):
+        result = {}
+        for key, values in rawdict.items():
+            if value is None or value == '':
+                value = '---'
+            result[key] = key
+            result[value] = value
+        return (result)
 
-    for key, value in org_data.items():
-        if value is None or value == '':
-            org_data[key] = '---'
+    # for key, value in org_data.items():
+    #     if value is None or value == '' or value = []:
+    #         org_data[key] = '---'
 
-    # clean_org_data = clean_dict(org_data)
+    clean_org_data = clean_dict(org_data)
     
     context.emit(data=org_data)
 
