@@ -80,9 +80,10 @@ def extractdata(context, data):
 
     def clean_dict(rawdict):
         result = {}
-        for key, values in rawdict.items():
+        for key, value in rawdict.items():
             if value is None or value == '':
                 value = '---'
+                result[key] = value
             result[key] = key
             result[value] = value
         return (result)
