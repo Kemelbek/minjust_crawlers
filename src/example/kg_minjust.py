@@ -6,15 +6,15 @@ def extractdata(context, data):
     page = response.html
 
       
-    full_name_kg = _gettext(page.xpath("//span[contains(text(),'1. П')]/../../following-sibling::td//text()"))
+    # full_name_kg = _gettext(page.xpath("//span[contains(text(),'1. П')]/../../following-sibling::td//text()"))
     name_ru = _gettext(page.xpath("//span[contains(text(),'2. П')]/../../following-sibling::td//text()"))
-    short_name_kg = _gettext(page.xpath("//span[contains(text(),'3. С')]/../../following-sibling::td//text()"))
+    # short_name_kg = _gettext(page.xpath("//span[contains(text(),'3. С')]/../../following-sibling::td//text()"))
     # short_name_ru = _gettext(page.xpath("//span[contains(text(),'4. С')]/../../following-sibling::td//text()"))
     # legal_form = _gettext(page.xpath("//span[contains(text(),'5. О')]/../../following-sibling::td//text()"))
     # foreign_participation = _gettext(page.xpath("//span[contains(text(),'6. Е')]/../../following-sibling::td//text()"))
     # registration_number = _gettext(page.xpath("//span[contains(text(),'7. Р')]/../../following-sibling::td//text()"))
     # # registration_number = _gettext(page.xpath("//span[contains(text(),'8. О')]/../../following-sibling::td//text()"))
-    # inn = _gettext(page.xpath("//span[contains(text(),'9. И')]/../../following-sibling::td//text()"))
+    inn = _gettext(page.xpath("//span[contains(text(),'9. И')]/../../following-sibling::td//text()"))
     # region = _gettext(page.xpath("//span[contains(text(),'10. О')]/../../following-sibling::td//text()"))
     # district = _gettext(page.xpath("//span[contains(text(),'11. Р')]/../../following-sibling::td//text()"))
     # city  = _gettext(page.xpath("//span[contains(text(),'12. Г')]/../../following-sibling::td//text()"))
@@ -42,14 +42,14 @@ def extractdata(context, data):
         
     org_data = {
     "url": response.url,
-    "full_name_kg": full_name_kg,
+    # "full_name_kg": full_name_kg,
     "name_ru": name_ru,
-    "short_name_kg": short_name_kg,
+    # "short_name_kg": short_name_kg,
     # "short_name_ru": short_name_ru,
     # "legal_form": legal_form,
     # "foreign_participation": foreign_participation,
     # "registration_number": registration_number,
-    # "inn": inn,
+    "inn": inn,
     # "region": region,
     # "district": district,
     # "city": city,
