@@ -75,6 +75,8 @@ def extractdata(context, data):
     "participant": participant
     }
 
+    print(org_data)
+
     context.emit(data=org_data)
 
 def _gettext(list):
