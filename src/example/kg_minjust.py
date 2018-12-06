@@ -75,7 +75,7 @@ def extractdata(context, data):
     "participant": participant
     }
 
-    print(org_data)
+    print("ORG_DATA ERROrS" + org_data)
 
     context.emit(data=org_data)
 
