@@ -44,7 +44,7 @@ def extractdata(context, data):
     "url": response.url,
     "full_name_kg": full_name_kg,
     "name_ru": name_ru,
-    # "short_name_kg": short_name_kg,
+    "short_name_kg": short_name_kg,
     # "short_name_ru": short_name_ru,
     # "legal_form": legal_form,
     # "foreign_participation": foreign_participation,
@@ -75,7 +75,8 @@ def extractdata(context, data):
     # "participant": participant
     }
 
-    print("ORG_DATA ERROrS" + org_data)
+    print("----------------Printing Org Data------------------")
+    print(org_data)
 
     context.emit(data=org_data)
 
