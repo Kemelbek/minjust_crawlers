@@ -88,7 +88,7 @@ def extractdata(context, data):
     #     return (result)
 
     for key, value in org_data.items():
-        if value = None:
+        if value is None:
             org_data[key] = '---'
 
     # clean_org_data = clean_dict(org_data)
