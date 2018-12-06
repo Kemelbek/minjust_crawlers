@@ -81,7 +81,7 @@ def extractdata(context, data):
     def clean_dict(items):
         result = {}
         for key, value in items.items():
-            if value is None or value == '':
+            if value is None or value == '' or value == []:
                 value = '---'
                 result[key] = value
             else:
