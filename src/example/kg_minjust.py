@@ -84,6 +84,8 @@ def extractdata(context, data):
             if value is None:
                 value = ''
                 result[key] = value
+                else 
+                result[key] = items[key]
         return result
 
     clean_org_data = clean_dict(org_data)
