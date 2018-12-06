@@ -84,7 +84,7 @@ def extractdata(context, data):
             if value is None:
                 value = ''
                 result[key] = value
-                else:
+            else:
                 result[key] = items[key]
         return result
 
