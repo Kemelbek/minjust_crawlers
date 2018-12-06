@@ -78,15 +78,14 @@ def extractdata(context, data):
     print("----------------Printing Org Data------------------")
     print(org_data)
 
-    def clean_dict(items):
+    def clean_dict(rawdict):
         result = {}
-        for key, values in items:
+        for key, values in rawdict.items():
             if value is None:
-                value = ''
-                result[key] = value
-            else:
-                result[key] = items[key]
-        return result
+                value = '---'
+            result[key] = key
+            result[value] = value
+        return (result)
 
     clean_org_data = clean_dict(org_data)
     context.emit(data=clean_org_data)
