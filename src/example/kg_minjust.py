@@ -32,47 +32,47 @@ def extractdata(context, data):
     type_of_ownership = _gettext(page.xpath("//span[contains(text(),'24. Ф')]/../../following-sibling::td//text()"))
     head_name_sur = _gettext(page.xpath("//span[contains(text(),'25. Ф')]/../../following-sibling::td//text()"))
     main_activity_type = _gettext(page.xpath("//span[contains(text(),'26. О')]/../../following-sibling::td//text()"))
-    eco_activity_code = gettext(page.xpath("//span[contains(text(),'27. К')]/../../following-sibling::td//text()"))
-    participants_phys_quan = gettext(page.xpath("//span[contains(text(),'28. К')]/../../following-sibling::td//text()"))
-    participants_jur_quan = gettext(page.xpath("//span[contains(text(),'29. К')]/../../following-sibling::td//text()"))
-    participants_total = gettext(page.xpath("//span[contains(text(),'30. О')]/../../following-sibling::td//text()"))
-    participants = gettext(page.xpath("//span[contains(text(),'31. У')]/../../following-sibling::td//text()"))
-    participant = gettext(page.xpath("//span[contains(text(),'Учредитель')]/../../following-sibling::td//text()"))
+    eco_activity_code = _gettext(page.xpath("//span[contains(text(),'27. К')]/../../following-sibling::td//text()"))
+    participants_phys_quan = _gettext(page.xpath("//span[contains(text(),'28. К')]/../../following-sibling::td//text()"))
+    participants_jur_quan = _gettext(page.xpath("//span[contains(text(),'29. К')]/../../following-sibling::td//text()"))
+    participants_total = _gettext(page.xpath("//span[contains(text(),'30. О')]/../../following-sibling::td//text()"))
+    participants = _gettext(page.xpath("//span[contains(text(),'31. У')]/../../following-sibling::td//text()"))
+    participant = _gettext(page.xpath("//span[contains(text(),'Учредитель')]/../../following-sibling::td//text()"))
         
         
     org_data = {
     "url": response.url,
-    "full_name_kg":full_name_kg,
-    "name_ru":name_ru,
-    "short_name_kg":short_name_kg,
-    "short_name_ru":short_name_ru,
-    "legal_form":legal_form,
-    "foreign_participation":foreign_participation,
-    "registration_number":registration_number,
-    "inn":inn,
-    "region":region,
-    "district":district,
-    "city":city,
-    "microdistr":microdistr,
-    "street":street,
-    "home":home,
-    "appartment":appartment,
-    "phone":phone,
-    "fax":fax,
-    "mail":mail,
-    "rereg":rereg,
-    "date_order":date_order,
-    "first_date_reg":first_date_reg,
-    "method_of_creating":method_of_creating,
-    "type_of_ownership":type_of_ownership,
-    "head_name_sur" :head_name_sur,
-    "main_activity_type" : main_activity_type,
-    "eco_activity_code":eco_activity_code,
-    "participants_phys_quan":participants_phys_quan,
-    "participants_jur_quan":participants_jur_quan,
-    "participants_total":participants_total,
-    "participants":participants,
-    "participant":participant
+    "full_name_kg": full_name_kg,
+    "name_ru": name_ru,
+    "short_name_kg": short_name_kg,
+    "short_name_ru": short_name_ru,
+    "legal_form": legal_form,
+    "foreign_participation": foreign_participation,
+    "registration_number": registration_number,
+    "inn": inn,
+    "region": region,
+    "district": district,
+    "city": city,
+    "microdistr": microdistr,
+    "street": street,
+    "home": home,
+    "appartment": appartment,
+    "phone": phone,
+    "fax": fax,
+    "mail": mail,
+    "rereg": rereg,
+    "date_order": date_order,
+    "first_date_reg": first_date_reg,
+    "method_of_creating": method_of_creating,
+    "type_of_ownership": type_of_ownership,
+    "head_name_sur": head_name_sur,
+    "main_activity_type": main_activity_type,
+    "eco_activity_code": eco_activity_code,
+    "participants_phys_quan": participants_phys_quan,
+    "participants_jur_quan": participants_jur_quan,
+    "participants_total": participants_total,
+    "participants": participants,
+    "participant": participant
     }
 
     context.emit(data=org_data)
