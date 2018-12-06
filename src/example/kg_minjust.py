@@ -78,9 +78,6 @@ def extractdata(context, data):
     print("----------------Printing Org Data------------------")
     print(org_data)
 
-    clean_org_data = clean_dict(org_data)
-    context.emit(data=clean_org_data)
-
     def clean_dict(items):
         result = {}
         for key, values in items:
@@ -88,6 +85,11 @@ def extractdata(context, data):
                 value = ''
                 result[key] = value
         return result
+
+    clean_org_data = clean_dict(org_data)
+    context.emit(data=clean_org_data)
+
+    
 
 def _gettext(list):
     if not list:
