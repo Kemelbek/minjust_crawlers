@@ -23,7 +23,7 @@ def extractdata(context, data):
     # home = _gettext(page.xpath("//span[contains(text(),'15. ')]/../../following-sibling::td//text()"))
     # appartment = _gettext(page.xpath("//span[contains(text(),'16. ')]/../../following-sibling::td//text()"))
     # phone = _gettext(page.xpath("//span[contains(text(),'17. Т')]/../../following-sibling::td//text()"))
-    # fax = _gettext(page.xpath("//span[contains(text(),'18. Ф')]/../../following-sibling::td//text()"))
+    fax = _gettext(page.xpath("//span[contains(text(),'18. Ф')]/../../following-sibling::td//text()"))
     # mail = _gettext(page.xpath("//span[contains(text(),'19. Э')]/../../following-sibling::td//text()"))
     # rereg = _gettext(page.xpath("//span[contains(text(),'20. Г')]/../../following-sibling::td//text()"))
     # date_order = _gettext(page.xpath("//span[contains(text(),'21. Д')]/../../following-sibling::td//text()"))
@@ -58,7 +58,7 @@ def extractdata(context, data):
     # "home": home,
     # "appartment": appartment,
     # "phone": phone,
-    # "fax": fax,
+    "fax": fax,
     # "mail": mail,
     # "rereg": rereg,
     # "date_order": date_order,
@@ -81,8 +81,8 @@ def extractdata(context, data):
     def clean_dict(items):
         result = {}
         for key, value in items.items():
-            if value is None:
-                value = ''
+            if value is None or value == '':
+                value = '---'
                 result[key] = value
             else:
                 result[key] = items[key]
