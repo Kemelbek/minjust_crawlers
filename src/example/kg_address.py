@@ -11,6 +11,18 @@ def extractdata(context, data):
         else:
             return list[0].strip()
 
+    
+    def clean_dict(items):
+        result = {}
+        for key, value in items.items():
+            if value is None or value == '' or value == []:
+                value = '---'
+                result[key] = value
+            else:
+                result[key] = items[key]
+        return result
+
+
     for i in range(len(page.xpath("//tbody/tr/td[@class='center'][2]//text()"))):
         address_id = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[2]//text()"))
         list_street_ky = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[3]/div[@class='list-street']/p//text()"))
@@ -42,16 +54,6 @@ def extractdata(context, data):
         context.emit(data=clean_org_data)
 
    
-
-    def clean_dict(items):
-        result = {}
-        for key, value in items.items():
-            if value is None or value == '' or value == []:
-                value = '---'
-                result[key] = value
-            else:
-                result[key] = items[key]
-        return result
 
     
         
