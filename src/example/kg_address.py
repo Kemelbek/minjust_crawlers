@@ -5,7 +5,11 @@ def extractdata(context, data):
     url = response.url
     page = response.html
 
-
+    def _gettext(list):
+        if not list:
+            return list
+        else:
+            return list[0].strip()
 
     for i in range(len(page.xpath("//tbody/tr/td[@class='center'][2]//text()"))):
         address_id = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[2]//text()"))
@@ -41,8 +45,4 @@ def extractdata(context, data):
 
         
 
-    def _gettext(list):
-        if not list:
-            return list
-        else:
-            return list[0].strip()
+    
