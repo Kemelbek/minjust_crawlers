@@ -22,26 +22,26 @@ def extractdata(context, data):
         pr_list_street_ru = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[6]/div[@class='list-street']/p/text()"))
         pr_street_type_ru = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[6]/div[@class='street-type']/span//text()"))
         orig_addr = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[7]//text()"))
+        org_data = {
+        "url": response.url,
+        "address_id": address_id,
+        "list_street_ky":list_street_ky,
+        "street_type_ky":street_type_ky,
+        "list_street_ru":list_street_ru,
+        "street_type_ru":street_type_ru,
+        "pr_list_street_ky":pr_list_street_ky,
+        "pr_street_type_ky":pr_street_type_ky,
+        "pr_list_street_ru":pr_list_street_ru,
+        "pr_street_type_ru":pr_street_type_ru,
+        "orig_addr":orig_addr
 
-       
+        }
+        print("----------------Printing Org Data------------------")
+        print(org_data)
+        clean_org_data = clean_dict(org_data)
+        context.emit(data=clean_org_data)
 
-    org_data = {
-    "url": response.url,
-    "address_id": address_id,
-    "list_street_ky":list_street_ky,
-    "street_type_ky":street_type_ky,
-    "list_street_ru":list_street_ru,
-    "street_type_ru":street_type_ru,
-    "pr_list_street_ky":pr_list_street_ky,
-    "pr_street_type_ky":pr_street_type_ky,
-    "pr_list_street_ru":pr_list_street_ru,
-    "pr_street_type_ru":pr_street_type_ru,
-    "orig_addr":orig_addr
-
-    }
-
-    print("----------------Printing Org Data------------------")
-    print(org_data)
+   
 
     def clean_dict(items):
         result = {}
@@ -53,8 +53,7 @@ def extractdata(context, data):
                 result[key] = items[key]
         return result
 
-    clean_org_data = clean_dict(org_data)
-    context.emit(data=clean_org_data)
+    
         
 
     
