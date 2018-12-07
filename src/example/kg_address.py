@@ -21,6 +21,7 @@ def extractdata(context, data):
         pr_street_type_ky = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[5]/div[@class='street-type']/span//text()"))
         pr_list_street_ru = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[6]/div[@class='list-street']/p/text()"))
         pr_street_type_ru = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[6]/div[@class='street-type']/span//text()"))
+        orig_addr = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[7]//text()"))
 
        
 
@@ -34,7 +35,8 @@ def extractdata(context, data):
     "pr_list_street_ky":pr_list_street_ky,
     "pr_street_type_ky":pr_street_type_ky,
     "pr_list_street_ru":pr_list_street_ru,
-    "pr_street_type_ru":pr_street_type_ru
+    "pr_street_type_ru":pr_street_type_ru,
+    "orig_addr":orig_addr
 
     }
 
