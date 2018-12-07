@@ -41,7 +41,7 @@ def extractdata(context, data):
     print("----------------Printing Org Data------------------")
     print(org_data)
 
-   def clean_dict(items):
+    def clean_dict(items):
         result = {}
         for key, value in items.items():
             if value is None or value == '' or value == []:
