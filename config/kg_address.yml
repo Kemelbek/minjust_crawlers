@@ -52,4 +52,4 @@ pipeline:
     params:
       table: "kg_address"
       unique:
-        - url
+        
