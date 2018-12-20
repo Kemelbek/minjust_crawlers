@@ -23,7 +23,7 @@ def extractdata(context, data):
         return result
 
 
-    for i in range(0,len(page.xpath("//tbody/tr"))+1):
+    for i in range(0,len(page.xpath("//tbody/tr"))+2):
         address_id = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[2]//text()"))
         list_street_ky = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[3]/div[@class='list-street']/p//text()"))
         street_type_ky = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[3]/div[@class='street-type']/span//text()"))
