@@ -18,35 +18,35 @@ pipeline:
     params:
       urls:
         - http://address.darek.gosreg.kg/search/street/7402
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=2#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=3#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=4#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=5#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=6#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=7#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=8#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=9#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=10#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=11#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=12#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=13#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=14#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=15#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=16#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=17#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=18#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=19#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=20#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=21#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=22#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=23#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=24#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=25#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=26#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=27#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=28#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=29#
-        - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=30#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=2#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=3#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=4#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=5#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=6#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=7#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=8#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=9#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=10#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=11#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=12#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=13#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=14#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=15#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=16#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=17#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=18#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=19#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=20#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=21#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=22#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=23#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=24#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=25#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=26#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=27#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=28#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=29#
+        # - http://address.darek.gosreg.kg/search/street/7402?streetType=0&streetName=&filter=sort&page=30#
 
     handle:
       pass: fetch
