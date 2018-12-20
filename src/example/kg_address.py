@@ -11,7 +11,7 @@ def extractdata(context, data):
         else:
             return list[0].strip()
 
-    
+
     def clean_dict(items):
         result = {}
         for key, value in items.items():
@@ -44,7 +44,7 @@ def extractdata(context, data):
         "pr_list_street_ky":pr_list_street_ky,
         "pr_street_type_ky":pr_street_type_ky,
         "pr_list_street_ru":pr_list_street_ru,
-        "pr_street_type_ru":pr_street_type_ru,
+        "pr_street_type_ru":pr_street_type_ru,  
         "orig_addr":orig_addr
 
         }
@@ -53,9 +53,4 @@ def extractdata(context, data):
         clean_org_data = clean_dict(org_data)
         context.emit(data=clean_org_data)
 
-   
-
-    
-        
-
-    
+        mesto = "http://address.darek.gosreg.kg/search/street/7402"   
