@@ -23,7 +23,7 @@ def extractdata(context, data):
         return result
 
 
-    for i in range(len(page.xpath("//tbody/tr/td[@class='center'][2]//text()"))):
+    for i in range(1,len(page.xpath("//tbody/tr/td[@class='center'][2]//text()"))+1):
         address_id = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[2]//text()"))
         list_street_ky = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[3]/div[@class='list-street']/p//text()"))
         street_type_ky = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[3]/div[@class='street-type']/span//text()"))
@@ -53,4 +53,3 @@ def extractdata(context, data):
         clean_org_data = clean_dict(org_data)
         context.emit(data=clean_org_data)
 
-        mesto = "http://address.darek.gosreg.kg/search/street/7402"   
