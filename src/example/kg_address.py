@@ -22,9 +22,9 @@ def extractdata(context, data):
                 result[key] = items[key]
         return result
 
-    def get_next_url(url):
-        spl_1 = url.split("page=")
-        spl_2 = spl_1[1].split("&")
+    def get_next_url(url): 
+        spl_1=url.split("page=")
+        spl_2=spl_1[1].split("&")
         num = int(spl_2[0])+1
         return spl_1[0]+"page="+str(num)+"&"+spl_2[1]
 
