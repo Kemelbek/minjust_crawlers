@@ -22,6 +22,12 @@ def extractdata(context, data):
                 result[key] = items[key]
         return result
 
+    def get_next_url(url):
+        spl_1 = url.split("page=")
+        spl_2 = spl_1[1].split("&")
+        num = int(spl_2[0])+1
+        return spl_1[0]+"page="+num+"&"+spl_2[1]
+
 
     for i in range(1,len(page.xpath('//tbody/tr'))+1):
         address_id = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[2]//text()"))
@@ -34,6 +40,7 @@ def extractdata(context, data):
         pr_list_street_ru = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[6]/div[@class='list-street']/p/text()"))
         pr_street_type_ru = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[6]/div[@class='street-type']/span//text()"))
         orig_addr = _gettext(page.xpath("//tbody/tr["+str(i)+"]/td[7]//text()"))
+        
         org_data = {
         "url": response.url,
         "address_id": address_id,
@@ -48,8 +55,17 @@ def extractdata(context, data):
         "orig_addr":orig_addr
 
         }
+
+        url_dict = {
+            'url' = get_next_url(url)
+        }
+
+        print(url)
+        print(get_next_url(url))
+        context.emit(rule = "store", data = clean_dict(org_data))
+
         print("----------------Printing Org Data------------------")
         print(org_data)
-        clean_org_data = clean_dict(org_data)
-        context.emit(data=clean_org_data)
+
+    context.emit(rule = "fetch", data = url_dict)
 

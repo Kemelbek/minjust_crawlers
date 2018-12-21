@@ -64,17 +64,11 @@ pipeline:
 
   parse:
     # Parse the scraped pages to find if they contain additional links.
-    method: example.kg_address_parse:parse
+    method: example.kg_address_parse:extractdata
     handle:
       # this makes it a recursive web crawler:
       store: extractdata
       fetch: fetch
-  
-  extractdata:
-    # Parse the scraped pages to extract useful information
-    method: example.kg_address:extractdata
-    handle:
-      pass: store
 
   store:
     # Store the crawled documents to a directory
