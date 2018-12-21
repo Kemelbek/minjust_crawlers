@@ -57,7 +57,7 @@ def extractdata(context, data):
         }
 
         url_dict = {
-            'url' = get_next_url(url)
+            'url': get_next_url(url)
         }
 
         print(url)
